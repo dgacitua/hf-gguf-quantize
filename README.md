@@ -6,6 +6,7 @@ Toolkit to download, quantize and package Hugging Face models as GGUF.
 
 - Access to a bash terminal
 - Python 3.10 (or higher)
+- Compilation tools to build llama.cpp
 - An installed acceleration framework (CUDA, Metal, and OpenBLAS are currently supported)
 
 ## Instructions
@@ -31,7 +32,7 @@ python quantize-custom.py <model_id> <quant_type>  # For custom quants
 ```
 
 2. If the packaging ends succesfully, the GGUF models will be available on the `gguf/` folder.
-3. You can delete any `<model_id>.fp16.gguf` models on the `models/` folder, they are no logner needed.
+3. You can delete any `<model_id>.fp16.gguf` models on the `models/` folder, they are no longer needed.
 
 
 ## References
