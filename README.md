@@ -1,4 +1,4 @@
-# hg-gguf-quantize
+# hf-gguf-quantize
 
 Toolkit to download, quantize and package Hugging Face models as GGUF.
 
