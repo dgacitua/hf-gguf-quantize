@@ -1,0 +1,8 @@
+gguf/*
+models/*
+
+llama.cpp/
+
+*/**/*.gguf
+
+!*/**/.gitkeep
