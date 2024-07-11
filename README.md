@@ -19,7 +19,7 @@ Toolkit to download, quantize and package Hugging Face models as GGUF.
 
 ### Download model
 
-1. Run `python download.py <model_id>` to download a model from Hugging Face. Replace `<model_id>` with a proper HF model id (e.g.: `tiiuae/falcon-7b`). Models are downloaded under the `models/` folder.
+1. Run `python download.py <model_id> -t <hf_token>` to download a model from Hugging Face. Replace `<model_id>` with a proper HF model id (e.g.: `tiiuae/falcon-7b`) and `<hf_token>` with a Hugging Face token from your account. Models are downloaded under the `models/` folder.
 
 ### Quantize and package model
 
@@ -28,7 +28,7 @@ Toolkit to download, quantize and package Hugging Face models as GGUF.
 python quantize-8bit.py <model_id>  # For Q8_0 quants
 python quantize-5bit.py <model_id>  # For Q5_K_M quants
 python quantize-4bit.py <model_id>  # For Q4_K_M quants
-python quantize-custom.py <model_id> <quant_type>  # For custom quants specified under <quant_type>
+python quantize-custom.py <model_id> -q <quant_type>  # For custom quants specified under <quant_type>
 ```
 
 2. If the packaging ends succesfully, the GGUF models will be available on the `gguf/` folder.
