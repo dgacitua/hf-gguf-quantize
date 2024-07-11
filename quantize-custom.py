@@ -1,4 +1,3 @@
-import sys
 import argparse
 import subprocess
 
@@ -36,7 +35,7 @@ def main():
             print_message("Quant type not set, using Q8_0")
             quant_type = "Q8_0"
         else:
-            quant_type = args.quant_type
+            quant_type = args.quant_type.upper()
 
         model_id = args.model_id
         model_name = model_id.split("/",1)[1]
@@ -51,8 +50,8 @@ def main():
 
         command2 = ["./llama.cpp/llama-quantize", f"models/{model_name}.fp16.gguf", quantized_model, quant_type]
         run_command(command2)
-    except:
-        print_message("An error has occurred!")
+    except Exception as error:
+        print("An error has occurred!", error)
     else:
         print_message("Model packing and quantizing successful!")
 
