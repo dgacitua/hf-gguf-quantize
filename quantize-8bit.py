@@ -36,7 +36,7 @@ def main():
 
         print_message(f'Packing HF model {model_id} to GGUF fp16!')
 
-        command1 = ["python", "./llama.cpp/convert-hf-to-gguf.py", f"models/{model_name}", "--outfile", f"models/{model_name}.fp16.gguf"]
+        command1 = ["python", "./llama.cpp/convert_hf_to_gguf.py", f"models/{model_name}", "--outfile", f"models/{model_name}.fp16.gguf"]
         run_command(command1)
 
         print_message(f'Preparing {quantized_model} with {quant_type} quantization!')

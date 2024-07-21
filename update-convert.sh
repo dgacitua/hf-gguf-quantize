@@ -2,4 +2,4 @@
 
 set -euxo pipefail
 
-cd llama.cpp && python convert-hf-to-gguf-update.py $1
+cd llama.cpp && git reset --hard HEAD && git pull && python convert_hf_to_gguf_update.py $1
