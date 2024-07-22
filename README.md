@@ -6,6 +6,7 @@ Toolkit to download, quantize and package Hugging Face models as GGUF.
 
 - Access to a bash terminal
 - Python 3.10 (or higher)
+- git
 - Compilation tools to build llama.cpp
 - An installed acceleration framework (CUDA, Metal, and OpenBLAS are currently supported)
 
